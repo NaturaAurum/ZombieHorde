@@ -714,6 +714,8 @@ GameObject:
   - component: {fileID: 114527751310625596}
   - component: {fileID: 114858243877743174}
   - component: {fileID: 114820668076347152}
+  - component: {fileID: 114051282734755244}
+  - component: {fileID: 114950451677887470}
   m_Layer: 0
   m_Name: Zombie_001
   m_TagString: Untagged
@@ -1996,6 +1998,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114051282734755244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697063649330358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2327f3002fc94f2b91d287c740439550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114527751310625596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2020,6 +2033,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     checkLayers: 0
+    target:
+      x: 0
+      y: 0
+      z: 0
   animator: {fileID: 95781463452248654}
 --- !u!114 &114858243877743174
 MonoBehaviour:
@@ -2034,6 +2051,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     speed: 0
+--- !u!114 &114950451677887470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697063649330358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168b0e3756704251859c57ee75912ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Value:
+      x: 0
+      y: 0
+      z: 0
 --- !u!137 &137403464589039220
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
