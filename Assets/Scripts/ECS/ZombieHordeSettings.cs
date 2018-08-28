@@ -24,5 +24,24 @@ namespace Assets.Scripts.ECS
     {
         public GameObject ZombiePrefab;
         public Transform[] SpawnPoints;
+        public Mesh ZombieMesh;
+        public Material ZombieMaterial;
+
+        private void OnDrawGizmos()
+        {
+            if (SpawnPoints != null && SpawnPoints.Length > 0)
+            {
+                Gizmos.color = Color.cyan;
+                foreach (var spawnPoint in SpawnPoints)
+                {
+                    Gizmos.DrawCube( spawnPoint.position, Vector3.one * 0.5f );
+                }
+            }
+        }
+
+        public Transform GetSpawnPoint()
+        {
+            return SpawnPoints[ Random.Range( 0, SpawnPoints.Length ) ];
+        }
     }
 }

@@ -170,8 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    spanwedCount: 0
-    spawnTerm: 0.1
+    spawnedCount: 0
+    spawnTerm: 1
 --- !u!4 &394439175
 Transform:
   m_ObjectHideFlags: 0
@@ -441,6 +441,8 @@ MonoBehaviour:
   - {fileID: 673000994}
   - {fileID: 1542313547}
   - {fileID: 1033964512}
+  ZombieMesh: {fileID: 4300000, guid: 2cc0980ebe89f3d47811024bb65433d9, type: 3}
+  ZombieMaterial: {fileID: 2100000, guid: 85f8c910365ecec48a8266b647dcf422, type: 2}
 --- !u!4 &1690006422
 Transform:
   m_ObjectHideFlags: 0

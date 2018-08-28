@@ -11,26 +11,30 @@ namespace Assets.Scripts.ECS
     public class ZombieSystem : JobComponentSystem
     {
 
-        struct ZombieGroup
+        struct ZombieData
         {
             public ComponentDataArray<Position> positions;
-            public ComponentDataArray<Rotation> rotations;
-            public ComponentDataArray<Zombie> zombies;
+            [ReadOnly] public ComponentDataArray<Rotation> rotations;
+            [ReadOnly] public ComponentDataArray<MoveSpeed> moveSpeeds;
+            [ReadOnly] public ComponentDataArray<Zombie> zombies;
         }
 
-        [Inject] private ZombieGroup zombieGroup;
+        ComponentGroup zombieGroup;
 
-        [BurstCompile]
-        struct ZombieTransform : IJobParallelForTransform
+        protected override void OnCreateManager( int capacity )
         {
-            public ComponentDataArray<Position> positions;
-            public ComponentDataArray<Rotation> rotations;
-            public ComponentDataArray<Zombie> zombies;
+            zombieGroup = GetComponentGroup
+            (
+                typeof( Position ),
+                ComponentType.ReadOnly(typeof(Rotation)),
+                ComponentType.ReadOnly(typeof(MoveSpeed)),
+                ComponentType.ReadOnly(typeof(Zombie))
+            );
+        }
 
-            public void Execute(int index, TransformAccess transform)
-            {
-                
-            }
+        protected override JobHandle OnUpdate( JobHandle inputDeps )
+        {
+            return base.OnUpdate( inputDeps );
         }
     }
 }

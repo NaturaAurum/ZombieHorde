@@ -16,7 +16,7 @@ namespace Assets.Scripts.ECS
         public static void Initialize()
         {
             var entityManager = World.Active.GetOrCreateManager<EntityManager>();
-            ZombieSpawnSystem.SetUp(entityManager);
+            //ZombieSpawnSystem.SetUp(entityManager);
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]

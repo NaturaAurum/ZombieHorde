@@ -710,12 +710,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4663440993286844}
-  - component: {fileID: 95781463452248654}
   - component: {fileID: 114527751310625596}
   - component: {fileID: 114858243877743174}
   - component: {fileID: 114820668076347152}
   - component: {fileID: 114051282734755244}
   - component: {fileID: 114950451677887470}
+  - component: {fileID: 95220267801865646}
   m_Layer: 0
   m_Name: Zombie_001
   m_TagString: Untagged
@@ -1980,7 +1980,7 @@ Transform:
   m_Father: {fileID: 4089666233620922}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95781463452248654
+--- !u!95 &95220267801865646
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -1990,9 +1990,9 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2cc0980ebe89f3d47811024bb65433d9, type: 3}
   m_Controller: {fileID: 9100000, guid: 1df64792bcbcfe7478ec2755ef2442ee, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -2037,7 +2037,7 @@ MonoBehaviour:
       x: 0
       y: 0
       z: 0
-  animator: {fileID: 95781463452248654}
+  animator: {fileID: 0}
 --- !u!114 &114858243877743174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    speed: 0
+    speed: 10
 --- !u!114 &114950451677887470
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,6 +15,7 @@ namespace Assets.Scripts.NonECS
         public Transform[] zombieSpawnPoints;
 
         public void GetSpawnPoints()
+
         {
             zombieSpawnPoints = GetComponentsInChildren<Transform>();
         }

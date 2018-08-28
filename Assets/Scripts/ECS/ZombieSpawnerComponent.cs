@@ -16,6 +16,9 @@ namespace Assets.Scripts.ECS
 
     public class ZombieSpawnerComponent : ComponentDataWrapper<ZombieSpawner>
     {
-        
+        private void OnGUI()
+        {
+            GUI.TextField( new Rect( 0, 0, 200, 20 ), Value.spawnedCount.ToString() );
+        }
     }
 }
