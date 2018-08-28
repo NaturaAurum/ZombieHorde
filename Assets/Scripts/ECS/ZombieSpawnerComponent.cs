@@ -10,11 +10,12 @@ namespace Assets.Scripts.ECS
     [System.Serializable]
     public struct ZombieSpawner : IComponentData
     {
-        public int spanwedCount;
+        public int spawnedCount;
         public float spawnTerm;
     }
 
     public class ZombieSpawnerComponent : ComponentDataWrapper<ZombieSpawner>
     {
+        
     }
 }
